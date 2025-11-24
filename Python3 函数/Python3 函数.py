@@ -41,7 +41,7 @@ mylist1 = [1,2,3]
 changelist(mylist1)
 print(f'函数外取值： {mylist1}')
 
-def printinfo(name,age = 39):
+def printinfo(name,age = 39): #默认参数必须放在最后面，否则会报：
     print(f'Your name is {name}')
     print(f'Your age is {age}')
     return
