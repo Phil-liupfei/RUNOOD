@@ -25,9 +25,33 @@ with open('Python3 with/input.txt', 'r') as infile, open('Python3 with/output.tx
 #2. 数据库连接
 import sqlite3
 
-with sqlite3.connect('example.db') as conn:
+with sqlite3.connect('database.db') as conn:
     cursor = conn.cursor()
     cursor.execute('SELECT * FROM users')
     rows = cursor.fetchall()
     for row in rows:
         print(row)
+
+with sqlite3.connect('database.db') as conn:
+    cursor = conn.cursor()
+    cursor.execute('SELECT * FROM users')
+    results = cursor.fetchall()
+    print(results)
+
+#3. 线程锁
+import threading
+
+lock = threading.Lock()
+
+with lock:
+    # 临界区代码
+    print("这段代码是线程安全的")
+
+import decimal
+
+
+#4. 临时修改系统状态
+with decimal.localcontext() as ctx:
+    ctx.prec = 42  # 临时设置高精度
+    # 执行高精度计算
+# 精度恢复原设置
