@@ -1,0 +1,2 @@
+Hello, this is a text file created with Python!
+第二行内容。
