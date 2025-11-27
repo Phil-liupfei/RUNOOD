@@ -63,4 +63,3 @@ print(os.path.normpath('D:/Python_Learning/RUNOOD/Python3 OS/Python OS 文件_�
 print(os.path.normpath('C:\\Users\\.\\Documents'))
 
 
-##
